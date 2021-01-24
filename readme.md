@@ -102,4 +102,4 @@ Spring -> React
 ## 1/20 ~ 1/27 2주차 목표
 ### 채점 큐 구현
 ### 코드 refactoring
-### 코드 파싱 issue 
+### ~~코드 파싱 issue ~~
