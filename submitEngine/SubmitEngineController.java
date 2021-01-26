@@ -7,16 +7,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 import java.util.concurrent.ArrayBlockingQueue;
 
 @RequiredArgsConstructor
 @RestController
 public class SubmitEngineController {
 
-    //Queue<String> server = new LinkedList<String>();
     ArrayBlockingQueue<String> server = new ArrayBlockingQueue<String> (6);
 
     private final SubmitEngineService submitEngineService;
