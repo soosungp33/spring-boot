@@ -31,6 +31,7 @@ import org.springframework.web.client.RestTemplate;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
+
 /**
  * Handles requests for the application home page.
  */
@@ -40,6 +41,8 @@ public class HomeController {
 	
 	public static final String furl = "http://210.117.181.103:5000";
 	public static final String eurl = "http://210.117.181.248:13577";
+	
+	
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	@CrossOrigin("*")
 	public String home() {
@@ -47,13 +50,7 @@ public class HomeController {
 	}
 	
 	
-
-	
-	
-	
-	
-	///////////////////////////////////////////////////////////
-	
+	/////////////////////////////////////////////////
 	/////////////////////////////////////////////////
 	
 }
