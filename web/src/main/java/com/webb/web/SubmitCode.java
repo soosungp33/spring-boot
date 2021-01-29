@@ -59,7 +59,7 @@ public class SubmitCode {
 		JSONObject jsarr = new JSONObject();
 		JSONArray jamain = new JSONArray();
 		jsarr.put("SubNum", Integer.toString(SubmitNum));
-		jsarr.put("Result", "Accepted");
+		jsarr.put("Result", result);
 		jamain.add(jsarr);
 		jsmain.put("Problems", jamain);
 		System.out.println(jsmain);
