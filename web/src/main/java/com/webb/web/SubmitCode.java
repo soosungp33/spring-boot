@@ -98,7 +98,7 @@ public class SubmitCode {
 		// make Entity
 		HttpEntity<MultiValueMap<String, String>> entity = new HttpEntity(params, headers); 
 		RestTemplate rt = new RestTemplate();
-		String url = eurl+"/judger-engine/"+Integer.toString(curengine);
+		String url = eurl+"/judger-engine";
 		return rt.exchange(url, HttpMethod.POST, entity, String.class);
 		
 	}
