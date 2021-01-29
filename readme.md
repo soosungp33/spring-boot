@@ -24,11 +24,11 @@ Spring Repository
 ### 문제 리스트 요청/응답
 React -> Spring
 
-/spring/problemdata에 요청
+/spring/problemdata에 GET 요청
 
 Spring -> Flask
 
-/에 요청
+/에 요청, GET
 
 이때 따로 parameter가 요구되지 않음.
 요청을 하면 바로 전달되는 방식
