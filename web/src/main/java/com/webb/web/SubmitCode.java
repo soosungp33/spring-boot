@@ -43,7 +43,7 @@ public class SubmitCode {
 		System.out.println(js.toString());
 		
 		//to Engine, Flask
-		//ResponseEntity<String> fresp1 = submitCode(SubmitNum, Integer.parseInt(Pnum));
+		ResponseEntity<String> fresp1 = submitCode(SubmitNum, Integer.parseInt(Pnum));
 		int tc_cnt=5;
 		//cycle();
 		System.out.println("current engine number: " + curengine);
@@ -52,7 +52,7 @@ public class SubmitCode {
 		//enq.poll();
 		//System.out.println("engine response: " + eresp.getBody().toString());
 		String result = eresp.getBody().toString();
-		//ResponseEntity<String> fresp2 = receiveResult(Integer.toString(SubmitNum), result);
+		ResponseEntity<String> fresp2 = receiveResult(Integer.toString(SubmitNum), result);
 		
 		// response to React
 		JSONObject jsmain = new JSONObject();
