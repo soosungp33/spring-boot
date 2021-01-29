@@ -39,8 +39,8 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 @RestController
 public class HomeController {
 	
-	public static final String furl = "http://210.117.181.103:5000";
-	public static final String eurl = "http://210.117.181.248:13577";
+	public static final String furl = "http://0.0.0.0:5000";
+	public static final String eurl = "http://0.0.0.0:13501";
 	
 	
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
