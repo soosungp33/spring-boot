@@ -20,6 +20,74 @@ Spring Repository
 
 ## Json 데이터 전송 형식
 
+### 회원 가입 - 아이디 중복 여부
+
+*Request*
+
+React -> Spring
+
+	{
+		isUnique : "ID"
+	}
+	
+Spring -> Flask
+
+	{
+		isUnique : "ID"
+	}
+	
+*Response*
+
+Flask -> Spring
+
+	{
+		isUnique : "True" 	// 중복될경우 False, 중복되지 않을 경우 True
+	}
+	
+Spring -> React
+	
+	{
+		isUnique : "True" 	// 중복될경우 False, 중복되지 않을 경우 True
+	}
+	
+### 회원 가입 - 회원 가입 요청
+React -> Spring -> Flask
+
+	{
+		ID : ""		
+		Pwd : ""	
+		Name : ""
+		//모든 데이터는 보안상의 이유로 해시 값으로 전달
+	}
+	
+### 로그인
+
+React -> Spring -> Flask
+
+	{
+		ID : ""		
+		Pwd : ""	
+		//모든 데이터는 보안상의 이유로 해시 값으로 전달
+	}
+	
+### 유저 정보 요청
+
+*Request*
+React -> Spring -> Flask
+
+	{
+		ID : ""	
+	}
+	
+*Response*
+Flask -> Spring -> React
+
+	{
+		ID : ""
+		SolvedList : ["1001", "1002", ...]
+	}
+	
+
 ### 문제 리스트 요청/응답
 React -> Spring
 
