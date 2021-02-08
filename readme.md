@@ -73,6 +73,7 @@ React -> Spring -> Flask
 ### 유저 정보 요청
 
 *Request*
+
 React -> Spring -> Flask
 
 	{
@@ -80,6 +81,7 @@ React -> Spring -> Flask
 	}
 	
 *Response*
+
 Flask -> Spring -> React
 
 	{
