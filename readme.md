@@ -20,6 +20,36 @@ Spring Repository
 
 ## Json 데이터 전송 형식
 
+
+### 채점 현황
+20개씩 스택에 채우게 되며, 형식은 다음과 같다.
+
+*Response*
+
+	{
+		Status : [
+		{
+			"SubNum" : "1"
+			"Pnum" : "1001"        //문제 번호
+			"ID" : "asdf1234"         //ID
+			"Result" : "TIME_LIMIT_EXCEED"           //채점 결과
+			"LangType" : "C++"
+			"CodeSize" : "132byte"
+			"Permission" : "True"/"False" //True일때 코드 열람 권한 존재
+		},
+		{
+			"SubNum" : "1"
+			"Pnum" : "1001"        //문제 번호
+			"ID" : "asdf1234"         //ID
+			"Result" : "TIME_LIMIT_EXCEED"           //채점 결과
+			"LangType" : "C++"
+			"CodeSize" : "132byte"
+			"Permission" : "True"/"False" //True일때 코드 열람 권한 존재
+		},
+		… ] //총 20개
+	}
+
+
 ### 회원 가입 - 아이디 중복 여부
 
 *Request*
@@ -41,13 +71,13 @@ Spring -> Flask
 Flask -> Spring
 
 	{
-		"isUnique" : "True" 	// 중복될경우 False, 중복되지 않을 경우 True
+		"ID" : "True" 	// 중복될경우 False, 중복되지 않을 경우 True
 	}
 	
 Spring -> React
 	
 	{
-		"isUnique" : "True" 	// 중복될경우 False, 중복되지 않을 경우 True
+		"ID" : "True" 	// 중복될경우 False, 중복되지 않을 경우 True
 	}
 	
 ### 회원 가입 - 회원 가입 요청
@@ -69,6 +99,14 @@ React -> Spring -> Flask
 		Pwd : ""	
 		//모든 데이터는 보안상의 이유로 해시 값으로 전달
 	}
+	
+
+Flask -> Spring -> React
+
+	{
+		"Result" : "True/False" // 로그인 결과 전달
+	}
+	
 	
 ### 유저 정보 요청
 
