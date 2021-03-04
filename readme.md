@@ -27,13 +27,13 @@ Spring Repository
 React -> Spring
 
 	{
-		isUnique : "ID"
+		"ID" : "ID"
 	}
 	
 Spring -> Flask
 
 	{
-		isUnique : "ID"
+		"ID" : "ID"
 	}
 	
 *Response*
@@ -41,13 +41,13 @@ Spring -> Flask
 Flask -> Spring
 
 	{
-		isUnique : "True" 	// 중복될경우 False, 중복되지 않을 경우 True
+		"isUnique" : "True" 	// 중복될경우 False, 중복되지 않을 경우 True
 	}
 	
 Spring -> React
 	
 	{
-		isUnique : "True" 	// 중복될경우 False, 중복되지 않을 경우 True
+		"isUnique" : "True" 	// 중복될경우 False, 중복되지 않을 경우 True
 	}
 	
 ### 회원 가입 - 회원 가입 요청
